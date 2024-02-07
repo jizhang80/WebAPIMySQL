@@ -19,3 +19,10 @@ user comment post,
 ## DB model design
 
 user (username, email, password, )
+
+## config
+> npm i
+.env content:
+```
+DATABASE_URL="mysql://username:password@dbhost:dbport/dbname"
+```

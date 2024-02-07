@@ -1,5 +1,7 @@
 # environment building process record
 
+## Dev config
+
 initialize a TypeScript/Nodejs/Expressjs project using npm:
 ```
 npm init -y
@@ -15,9 +17,25 @@ install the Prisma CLI as a development dependency
 set up Prisma with the init command of the Prisma CLI
 > npx prisma init --datasource-provider mysql
 
+
+
+## DB config
+create user 'dev' only allow connect from 'dev server'
+```
+create user 'dev'@'devServerIp' identified by 'Password';
+
+grant all
+	on mydb.*
+	to 'dev'@'192.168.64.1';
+```
+
+change user password
+> ALTER USER 'userName'@'ip' IDENTIFIED BY 'New-Password-Here';
+
+
+## Dev config continue
 Create model in prisma/schema.prisma
 ...
 
 create SQL migration file
 > npx prisma migrate dev --name init
-
