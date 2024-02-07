@@ -1,6 +1,16 @@
- import prisma from '../../prisma/prisma';
+import prisma from '../../prisma/prisma';
 import express from 'express';
 const router = express.Router();
+
+// get all the users
+router.get('/', async (req, res) => {
+	try {
+		const user = await prisma.user.findMany();
+		res.status(200).json({user: user, message: "get all users"});
+	} catch (err) {
+		res.status(400).json(err)
+	}
+});
 
 // add user
 router.post('/', async (req, res) => {
