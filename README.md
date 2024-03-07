@@ -8,6 +8,7 @@ This is a web application back-end RESTful API application base on MySQL databas
 * Prisma ORM
 * MySQL
 * JWT
+* ejs
 
 ## environment setup process
 ### pre-task
