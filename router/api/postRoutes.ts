@@ -36,8 +36,6 @@ router.get('/', async (req, res) => {
 
 // get posts by id
 
-// add post
-
 // add comment
 
 
