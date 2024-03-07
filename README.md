@@ -10,7 +10,14 @@ This is a web application back-end RESTful API application base on MySQL databas
 * JWT
 
 ## environment setup process
-... TBD
+### pre-task
+* install git
+* add your SSH key to GitHub
+* install node.js
+* install yarn
+### steps
+1. git clone git@github.com:jizhang80/WebAPIMySQL.git
+2. yarn install # install all the packages in package.json
 
 ## User Story
 user create post,
